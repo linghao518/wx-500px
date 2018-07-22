@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="photo-list">
+    <image mode="widthFix" wx:for="{{photos}}" wx:key="{{item.id}}" src="http://img.500px.me/{{item.id}}.jpg!p4"></image>
+  </view>
+</view>
