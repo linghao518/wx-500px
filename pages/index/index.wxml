@@ -2,12 +2,15 @@
 <view class="container">
   <view class="photo-list">
     <view 
-      class="photo-wrap {{activedId === item.id ? 'photo-actived' : ''}}"
+      class="photo-wrap"
       wx:for="{{photos}}"
       wx:key="{{item.id}}"
       catchtap="zoomIn"
       data-id="{{item.id}}">
       <image mode="widthFix" src="{{IMG_URL}}{{item.id}}.jpg!p4"></image>
     </view>
+  </view>
+  <view class="photo-detail {{activedId ? 'actived' : ''}}" style="left: {{currentPhoto.x}}px; top: {{currentPhoto.y}}px">
+    <view catchtap="close">XXX</view>
   </view>
 </view>

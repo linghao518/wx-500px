@@ -7,6 +7,10 @@ Page({
   data: {
     photos: [],
     activedId: null,
+    currentPhoto: {
+      x: 0,
+      y: 0
+    },
     IMG_URL
   },
   onLoad () {
@@ -18,7 +22,15 @@ Page({
     })
   },
   zoomIn(ev) {
+    console.log(ev)
+    this.setData({ currentPhoto: {
+      x: ev.currentTarget.offsetLeft,
+      y: ev.currentTarget.offsetTop
+    }})
     this.setData({ activedId: ev.currentTarget.dataset.id })
+  },
+  close(ev) {
+    this.setData({ activedId: null })
   }
   // goDetail(ev) {
   //   let info = ev.currentTarget.dataset
