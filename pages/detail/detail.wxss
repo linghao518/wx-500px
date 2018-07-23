@@ -1,0 +1,12 @@
+.photo-detail {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.photo-detail image {
+  width: 100%;
+  background: #ccc;
+  display: block;
+}

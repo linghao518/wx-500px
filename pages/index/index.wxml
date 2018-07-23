@@ -1,6 +1,13 @@
 <!--index.wxml-->
 <view class="container">
   <view class="photo-list">
-    <image mode="widthFix" wx:for="{{photos}}" wx:key="{{item.id}}" src="http://img.500px.me/{{item.id}}.jpg!p4"></image>
+    <view 
+      class="photo-wrap {{activedId === item.id ? 'photo-actived' : ''}}"
+      wx:for="{{photos}}"
+      wx:key="{{item.id}}"
+      catchtap="zoomIn"
+      data-id="{{item.id}}">
+      <image mode="widthFix" src="{{IMG_URL}}{{item.id}}.jpg!p4"></image>
+    </view>
   </view>
 </view>

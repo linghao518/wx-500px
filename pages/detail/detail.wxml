@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="photo-detail">
+    <image 
+      mode="widthFix"
+      src="{{IMG_URL}}{{photo.id}}.jpg!p4"></image>
+  </view>
+</view>
